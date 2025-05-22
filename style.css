@@ -1,0 +1,68 @@
+
+
+
+body {
+    padding: 5vw 5vh;
+    
+}
+@media (max-width: 768px) {
+    .avatar {
+      width: auto;       /* Breedte */
+      height: 50vh;      /* Hoogte gelijk aan breedte, voor vierkant */
+       /* Rond maken */
+      display: block;     /* Zorgt dat margin werkt */
+      margin: 20px auto; 
+      object-fit: contain;
+    }
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-family: "graphie", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+    }
+    h1{ 
+        font-family: graphie, sans-serif;
+font-weight: 900;
+font-style: normal;
+font-size: 51pt;
+line-height: 40pt;
+color: #173DAE;
+    }
+    h2 {
+        font-family: graphie, sans-serif;
+font-weight: 500;
+font-style: normal;
+font-size: 18pt;
+line-height: 30pt;
+    }
+    nav ul {
+        display: flex;            /* Zet lijstitems naast elkaar */
+  justify-content: center;  /* Centreert ze in het midden */
+  list-style: none;         /* Verwijder standaard bolletjes */
+  padding: 0;
+  gap: 5rem;
+    }
+    nav li a {
+        font-family: graphie, sans-serif;
+font-weight: 500;
+font-style: normal;
+font-size: 25pt;
+text-decoration: none;
+color: black;
+text-decoration: underline;
+      }
+      nav {
+        margin-top: 100px;
+      }
+      nav li a:hover {
+        text-decoration: none; /* voorkomt onderlijning bij hover */
+        color: #000000; /* optioneel: verander kleur bij hover */
+      }
+  }
+
+
+

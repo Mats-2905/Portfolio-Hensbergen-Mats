@@ -1,0 +1,274 @@
+body {
+    padding: 5vw 3vh;
+    overflow-x: hidden;
+    
+}
+@media (max-width: 768px)
+{
+    h1{
+        font-family: graphie, sans-serif;
+font-weight: 800;
+font-style: normal;
+color: #F2C230;
+font-size: 3.33rem;
+    }
+    .about-header {
+        max-width: 1000px;      /* pas aan naar jouw content breedte */
+        margin: 0 auto;        /* center de header */
+        padding: 25px 2vw;     /* zelfde padding als de rest */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+      }
+      
+      /* Zorg dat de ABOUT titel geen marge bovenaan heeft */
+      .about-title {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-family: graphie, sans-serif;
+        font-weight: 800;
+        font-size: 3.33rem;
+        color: #F2C230;
+      }
+      
+      /* De top-nav even breed en netjes naast de titel */
+      .top-nav ul {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .top-nav a {
+        text-decoration: none;
+        color: black;
+        font-family: graphie, sans-serif;
+font-weight: 500;
+font-style: normal;
+font-size: 1.17rem;
+text-decoration: underline;
+      }
+      .top-nav a:hover {
+        color: #000000; /* Kies zelf een kleur */
+        text-decoration: none; /* of geen underline als je iets anders wil */
+      }
+      .about-content {
+        font-family: graphie, sans-serif;
+font-weight: 500;
+font-style: normal;
+font-size: 1.5rem;
+padding: 0 2vw;
+      }
+      .hallo {
+        font-size: 1.6rem;
+      }
+      .zigzag-gallery {
+  padding: 20px 1vw;  /* minder padding, ook aan rechterkant */
+  margin-top: 50px;
+  gap: 150px;
+  display: flex;
+  flex-direction: column;
+}
+
+.zigzag-item {
+    position: relative; /* voor hover-effecten */
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0 2vw;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+  
+  .zag-left {
+    justify-content: flex-start;
+  }
+  
+  .zag-right {
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+  }
+  
+  .zig {
+    width: 150px;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .large-img .zig {
+    width: 200px;
+  }
+  
+  .hover-text {
+    opacity: 0;
+    max-width: 200px;
+    margin-left: 20px;
+    margin-right: 20px;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .zigzag-item:hover .hover-text {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .zigzag-item:hover .zig {
+    transform: scale(1.05);
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0,0,0,0.3);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+  }
+  
+  /* Maak overlay zichtbaar bij hover op een zigzag-item */
+  .zigzag-item:hover ~ .overlay {
+    opacity: 1;
+  }
+
+
+.zag-left {
+  justify-content: flex-start;
+}
+
+.zag-right {
+  justify-content: flex-end;
+  flex-direction: row-reverse;
+}
+    
+      .zig {
+        width: 150px;
+        height: auto;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+      }
+    
+      /* Grotere afbeeldingen */
+      .large-img .zig {
+        width: 200px;
+      }
+    
+      /* Hover tekst standaard verbergen */
+      .hover-text {
+        opacity: 0;
+        max-width: 200px;
+        margin-left: 20px;
+        margin-right: 20px;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
+        font-size: 1rem;
+        color: #333;
+      }
+    
+      /* Hover tekst tonen */
+      .zigzag-item:hover .hover-text {
+        opacity: 1;
+        pointer-events: auto;
+      }
+    
+      /* Afbeelding iets groter bij hover */
+      .zigzag-item:hover .zig {
+        transform: scale(1.05);
+      }
+    
+      /* Extra ruimte tussen tekst en eerste afbeelding */
+      .img1 {
+        margin-top: 30px;
+      }
+      .hover-text{
+        font-family: graphie, sans-serif;
+font-weight: 500;
+font-style: normal;
+font-size: 1.33rem;
+
+      
+    }
+    .overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0,0,0,0.3); /* donker, maar doorzichtig */
+  pointer-events: none;              /* klikbare elementen erdoorheen */
+  opacity: 0;                       /* standaard onzichtbaar */
+  transition: opacity 0.3s ease;
+  z-index: 1000;                    /* boven je content */
+}
+
+/* Als je over een zigzag-item hovert, toon de overlay */
+.zigzag-item:hover ~ .overlay {
+  opacity: 1;
+}
+.bottom-nav {
+    position: relative;
+    background-color: #173DAE;
+    width: 100%;
+    height: 200px; /* iets hoger voor meer ruimte */
+    margin-top: 50px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0;
+    padding-bottom: 15px;
+    left: 0;
+    right: 0;
+    /* voorkom horizontale scroll */
+    overflow-x: hidden;
+    
+  }
+  
+  .footer-logo {
+    height: 80px;  /* groter logo */
+    display: block;
+    margin: 10px auto 0 auto;
+  }
+  
+  .bottom-nav nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .bottom-nav nav ul li a {
+    color: white;
+    text-decoration: underline;
+    font-family: graphie, sans-serif;
+    font-weight: 600;
+    font-size: 2.0rem;
+  }
+  
+  .bottom-nav nav ul li a:hover {
+    text-decoration: none;
+  }
+  .bottom-nav nav {
+    padding-top: 15px;
+  }
+  /* De link van de afbeelding */
+  .footer-logo-link {
+    margin-top: 15px;
+    cursor: pointer;
+  }
+  .footer-logo:hover {
+    transform: scale(1.50); /* iets vergroten bij hover */
+  }
+  
+ } 
+ @media (min-width: 769px) {
+    body {
+      padding: 3vw 4vh; /* eventueel wat andere padding op desktop */
+      overflow-x: hidden; /* voorkom horizontale scroll */
+    }    
+}
