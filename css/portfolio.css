@@ -3,3 +3,54 @@ body {
     overflow-x: hidden;
     
 }
+@media (max-width: 768px)
+{
+    h1{
+        font-family: graphie, sans-serif;
+font-weight: 800;
+font-style: normal;
+color: #F2C230;
+font-size: 3.33rem;
+    }
+    .about-header {
+        max-width: 1000px;      /* pas aan naar jouw content breedte */
+        margin: 0 auto;        /* center de header */
+        padding: 25px 2vw;     /* zelfde padding als de rest */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+      }
+      
+      /* Zorg dat de ABOUT titel geen marge bovenaan heeft */
+      .about-title {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-family: graphie, sans-serif;
+        font-weight: 800;
+        font-size: 3.33rem;
+        color: #F2C230;
+      }
+      
+      /* De top-nav even breed en netjes naast de titel */
+      .top-nav ul {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .top-nav a {
+        text-decoration: none;
+        color: black;
+        font-family: graphie, sans-serif;
+font-weight: 500;
+font-style: normal;
+font-size: 1.17rem;
+text-decoration: underline;
+      }
+      .top-nav a:hover {
+        color: #000000; /* Kies zelf een kleur */
+        text-decoration: none; /* of geen underline als je iets anders wil */
+      }
