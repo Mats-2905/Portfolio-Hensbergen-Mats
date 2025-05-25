@@ -12,7 +12,7 @@ font-style: normal;
 color: #F2C230;
 font-size: 3.33rem;
     }
-    .about-header {
+    .portfolio-header {
         max-width: 1000px;      /* pas aan naar jouw content breedte */
         margin: 0 auto;        /* center de header */
         padding: 25px 2vw;     /* zelfde padding als de rest */
@@ -23,13 +23,13 @@ font-size: 3.33rem;
       }
       
       /* Zorg dat de ABOUT titel geen marge bovenaan heeft */
-      .about-title {
+      .portfolio-title {
         margin-top: 0;
         margin-bottom: 0;
         font-family: graphie, sans-serif;
         font-weight: 800;
         font-size: 3.33rem;
-        color: #F2C230;
+        color: #D95E1A;
       }
       
       /* De top-nav even breed en netjes naast de titel */
@@ -54,3 +54,78 @@ text-decoration: underline;
         color: #000000; /* Kies zelf een kleur */
         text-decoration: none; /* of geen underline als je iets anders wil */
       }
+      .rectangle-container {
+        flex-direction: column; /* Zorgt dat het 1 kolom wordt */
+      }
+    
+}
+.rectangle-container {
+    display: flex;
+    flex-direction: column; /* 1 kolom */
+    gap: 20px; /* ruimte tussen de rijen */
+     /* optioneel, voor breedte */
+    margin: 0 auto; /* center de container */
+  }
+  
+  .rectangle {
+    background-color: #ccc;
+    height: 400px; /* hoogte van de rechthoek */
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #333;
+  }
+
+  @media (min-width: 769px) {
+    body {
+      padding: 3vw 4vh; /* eventueel wat andere padding op desktop */
+      overflow-x: hidden; /* voorkom horizontale scroll */
+    }  
+    .portfolio-header {
+        display: flex;
+        justify-content: space-between; /* Titel links, nav rechts */
+        align-items: center;            /* Verticaal uitlijnen */
+        padding: 20px 0vw; 
+                     /* Wat ruimte aan de zijkanten */
+      }
+      
+      /* Optioneel: iets grotere font-size voor desktop */
+      .portfolio-title {
+        font-size: 5.83rem;
+        margin: 0;
+        font-family: graphie, sans-serif;
+font-weight: 800;
+font-style: normal;
+color: #D95E1A;
+      }
+      
+      /* Nav */
+      .top-nav ul {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .top-nav a {
+        text-decoration: none;
+        color: black;
+        font-family: graphie, sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 2.5rem;
+        text-decoration: underline;
+        font-family: graphie, sans-serif;
+font-weight: 500;
+font-style: normal;
+padding: 20px;
+      }
+      
+      .top-nav a:hover {
+        color: #000000;
+        text-decoration: none;
+      }
+    }
